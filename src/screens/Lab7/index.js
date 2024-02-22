@@ -1,0 +1,44 @@
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import Home from "./home";
+import User from "./user";
+import { Image, View } from "react-native";
+const Tab = createBottomTabNavigator();
+const Lab7 = () =>{
+    return(
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen name="Home" component={Home}
+                options={{
+                    tabBarIcon:({forcused})=>{
+                        return(
+                            <View>
+                                <Image 
+                                source={require('../../asseets/icon/home.png')}
+                                resizeMode="contain"
+                                style={{width: 25}}
+                                />
+                            </View>
+                        )
+                    }
+                }}/> 
+                <Tab.Screen name="User" component={User}
+                                options={{
+                                    tabBarIcon:({forcused})=>{
+                                        return(
+                                            <View>
+                                                <Image 
+                                                source={require('../../asseets/icon/user1.png')}
+                                                resizeMode="contain"
+                                                style={{width: 25}}
+                                                />
+                                            </View>
+                                        )
+                                    }
+                                }}/>
+            </Tab.Navigator>
+        </NavigationContainer>
+    );
+};
+export default Lab7;

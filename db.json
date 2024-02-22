@@ -1,0 +1,15 @@
+{
+    "users":[
+        {
+            "name":"Nguyen Tan Duy",
+            "birthday":"12-08-2004",
+            "id":"1"
+
+        },
+        {
+            "name":"Nguyen Thanh Binh",
+            "birthday":"20-07-2004",
+            "id":"2"
+        }
+    ]
+}
